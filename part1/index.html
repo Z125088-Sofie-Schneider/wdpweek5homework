@@ -67,8 +67,11 @@
       .then(data => {
         const randomIndex = Math.floor(Math.random() * data.length);
         const quote = data[randomIndex];
-        quoteText.textContent = `"${quote.q}"`;
-        authorText.textContent = `— ${quote.a}`;
+
+        typeText(quoteText, `"${quote.q}"`, 30);
+        setTimeout(() => {
+        typeText(authorText, `— ${quote.a}`, 30);
+         }, quote.q.length * 30 + 200);
       });
 
     }
