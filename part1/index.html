@@ -67,7 +67,7 @@
     if (index === text.length) {
       clearInterval(interval);
     }
-  }, delay);
+    }, delay);
     }
 
     function getQuote() {
@@ -80,7 +80,7 @@
         const randomIndex = Math.floor(Math.random() * data.length);
         const quote = data[randomIndex];
 
-        typeText(quoteText, `"${quote.q}"`, 50);
+        typeText(quoteText, `"${quote.q}"`, 30);
         setTimeout(() => {
         typeText(authorText, `— ${quote.a}`, 30);
          }, quote.q.length * 30 + 200);
