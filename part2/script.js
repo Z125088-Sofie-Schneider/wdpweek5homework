@@ -24,6 +24,7 @@ function showQuestion() {
 
   const progressPercent = ((currentQuestionIndex) / questions.length) * 100;
   document.getElementById("progressBar").style.width = `${progressPercent}%`;
+  
    //INPUT YOUR CODE HERE
    //HINT: Loop through each option for the current question
   q.options.forEach((option, index) => {
