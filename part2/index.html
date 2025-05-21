@@ -46,12 +46,30 @@
       font-weight: bold;
       text-align: center;
     }
+    .progress-bar-container {
+      width: 100%;
+      background-color: #e0e0e0;
+      height: 20px;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 100%;
+      width: 0%;
+      background-color: #4caf50;
+      transition: width 0.3s ease;
+    }
+
   </style>
 </head>
 <body>
 
   <h1>JavaScript Quiz</h1>
-  <div class="quiz-box">
+    <div class="quiz-box">
+      <div class="progress-bar-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
     <div id="question-count">Question 1 of 30</div>
     <div id="question">Question will appear here</div>
     <div id="options"></div>

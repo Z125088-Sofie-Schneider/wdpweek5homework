@@ -14,6 +14,7 @@ fetch("questions.json")
     showQuestion();
   });
 
+  
 function showQuestion() {
   clearOptions();
   document.getElementById("question-count").textContent =
@@ -21,6 +22,8 @@ function showQuestion() {
   const q = questions[currentQuestionIndex];
   questionText.textContent = q.question;
 
+  const progressPercent = ((currentQuestionIndex) / questions.length) * 100;
+  document.getElementById("progressBar").style.width = `${progressPercent}%`;
    //INPUT YOUR CODE HERE
    //HINT: Loop through each option for the current question
   q.options.forEach((option, index) => {
